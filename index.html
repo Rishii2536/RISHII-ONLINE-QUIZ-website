@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizSpark | Online Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="QuizSpark home">
+      <span class="brand-icon">Q</span>
+      <span>QuizSpark</span>
+    </a>
+    <span class="header-tag">LEARN · PLAY · GROW</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR KNOWLEDGE, YOUR PACE</p>
+        <h1>Small quizzes.<br><span>Big progress.</span></h1>
+        <p class="hero-description">Challenge yourself with quick quizzes, learn something new, and track your score as you go.</p>
+        <div class="hero-points">
+          <span>✓ Instant results</span>
+          <span>✓ Beginner friendly</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="floating-card card-top">✦ Keep learning</div>
+        <div class="quiz-illustration">
+          <div class="paper-top"><span></span><span></span><span></span></div>
+          <div class="paper-line long"></div>
+          <div class="paper-option"><b>✓</b><span></span></div>
+          <div class="paper-option"><i></i><span></span></div>
+          <div class="paper-option"><i></i><span></span></div>
+          <div class="paper-line short"></div>
+        </div>
+        <div class="floating-card card-bottom">★ Your next win</div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PICK A CHALLENGE</p>
+          <h2>Ready to test yourself?</h2>
+        </div>
+        <span class="question-count">10 questions · 1 quiz</span>
+      </div>
+
+      <article class="quiz-card">
+        <div class="quiz-icon">⌘</div>
+        <div class="quiz-info">
+          <span class="level-pill">BEGINNER</span>
+          <h3>Computer Basics</h3>
+          <p>Explore basic computer knowledge, software, hardware and the internet.</p>
+          <div class="quiz-meta"><span>◷ About 3 minutes</span><span>•</span><span>10 questions</span></div>
+        </div>
+        <button class="primary-button" id="start-button">Start quiz <span>→</span></button>
+      </article>
+    </section>
+
+    <section class="quiz-panel hidden" id="quiz-panel" aria-live="polite">
+      <div class="quiz-panel-top">
+        <button class="text-button" id="exit-button">← Back to quizzes</button>
+        <span id="question-counter">QUESTION 1 OF 10</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-area">
+        <p class="eyebrow">COMPUTER BASICS</p>
+        <h2 id="question-text">Question goes here</h2>
+        <div class="options-list" id="options-list"></div>
+        <p class="answer-message hidden" id="answer-message"></p>
+        <div class="quiz-actions">
+          <span class="hint-text">Take your time. Choose one answer.</span>
+          <button class="primary-button" id="next-button" disabled>Next question <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-panel hidden" id="results-panel" aria-live="polite">
+      <div class="result-icon" id="result-icon">🏆</div>
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <h2 id="result-title">Great work!</h2>
+      <p class="result-description" id="result-description">Here is how you did.</p>
+      <div class="score-card">
+        <span class="score-label">YOUR SCORE</span>
+        <div class="score-number"><span id="score-number">0</span><small>/ 10</small></div>
+        <div class="result-track"><div class="result-fill" id="result-fill"></div></div>
+        <p id="score-percent">0% correct</p>
+      </div>
+      <div class="result-actions">
+        <button class="primary-button" id="restart-button">Try again ↻</button>
+        <button class="secondary-button" id="home-button">Back to home</button>
+      </div>
+      <div class="review-box">
+        <h3>Answer review</h3>
+        <div id="review-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>QuizSpark</span>
+    <span>A student project made with HTML, CSS & JavaScript</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
